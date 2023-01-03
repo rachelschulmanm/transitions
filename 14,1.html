@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="14,2.css">
+    <title>Document</title>
+    <style>
+        body{background-color: #333;
+            display: flex;
+            align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+        }
+        .box{
+    background-color: red;
+width: 100px;
+height: 100px;
+position: relative;
+overflow: hidden;
+
+}
+
+
+.box::after{
+   content: '';
+   background-color: purple;
+    position: absolute;
+    
+    /* animation-name: animate1 ;
+  animation-duration: 3s; */
+    height:100px;
+   width: 100px; 
+  transition: all 1.5s ease-in-out;
+
+}
+.box:hover::after{
+    transform: translateX(-100px);
+ 
+}
+
+    </style>
+</head>
+<body>
+  <div class="box"></div>  
+</body>
+</html>
